@@ -1,0 +1,6 @@
+class MethodDefinitionOtbs
+{
+  double(value) {
+    return value * 2;
+  }
+}

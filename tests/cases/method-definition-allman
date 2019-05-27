@@ -1,0 +1,7 @@
+class MethodDefinitionAllman
+{
+  double(value)
+  {
+    return value * 2;
+  }
+}

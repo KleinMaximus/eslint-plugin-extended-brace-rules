@@ -1,0 +1,6 @@
+class ClassDeclarationBody
+{ constructor(value)
+  {
+    this.value = value;
+  }
+}

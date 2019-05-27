@@ -1,0 +1,6 @@
+const ClassExpressionClose = class ClassExpressionClose
+{
+  constructor(value)
+  {
+    this.value = value;
+  } };

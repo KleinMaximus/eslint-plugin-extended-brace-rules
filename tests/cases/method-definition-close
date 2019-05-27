@@ -1,0 +1,6 @@
+class MethodDefinitionClose
+{
+  constructor(initial)
+  {
+    this.value = initial; }
+}

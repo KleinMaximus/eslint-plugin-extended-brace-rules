@@ -1,0 +1,3 @@
+const functionExpressionBody = function functionExpressionBody()
+{ console.log('functionExpressionAllman');
+};

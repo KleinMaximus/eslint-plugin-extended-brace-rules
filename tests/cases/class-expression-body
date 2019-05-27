@@ -1,0 +1,6 @@
+const ClassExpressionBody = class ClassExpressionBody
+{ constructor(value)
+  {
+    this.value = value;
+  }
+};

@@ -1,0 +1,6 @@
+class ClassDeclarationClose
+{
+  constructor(value)
+  {
+    this.value = value;
+  } }

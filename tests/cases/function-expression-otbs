@@ -1,0 +1,3 @@
+const functionExpressionOtbs = function functionExpressionOtbs() {
+  console.log('functionExpressionOtbs');
+};

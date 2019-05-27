@@ -1,0 +1,4 @@
+const functionExpressionAllman = function functionExpressionAllman()
+{
+  console.log('functionExpressionAllman');
+};

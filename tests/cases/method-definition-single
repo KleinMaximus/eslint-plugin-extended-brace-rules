@@ -1,0 +1,4 @@
+class MethodDefinitionSingle
+{
+  double(value) { return value * 2; }
+}

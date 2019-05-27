@@ -1,0 +1,55 @@
+{
+  "name": "eslint-plugin-extended-brace-rules",
+  "version": "0.1.0",
+  "description": "Enhancements to eslint brace rules",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "author": {
+    "name": "nikolay Maksimov",
+    "email": "kleinmaximus@yandex.ru"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "rimraf lib && babel src --extensions \".js,.ts\" --out-dir lib --source-maps inline",
+    "lint": "eslint --ext .ts,.js --ignore-path .eslintignore .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "eslint-plugin-brace-rules": "^0.1.6",
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@babel/runtime": "^7.4.5",
+    "@cloudcmd/read-files-sync": "^2.0.1",
+    "@types/eslint": "^4.16.6",
+    "@types/jest": "^24.0.13",
+    "@types/lodash": "^4.14.130",
+    "@types/node": "^12.0.2",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "husky": "^2.3.0",
+    "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.5",
+    "typescript-eslint-parser": "^22.0.0"
+  },
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn build && git add .",
+      "pre-push": "yarn test"
+    }
+  }
+}
