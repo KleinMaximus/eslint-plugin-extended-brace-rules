@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-extended-brace-rules",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Enhancements to eslint brace rules",
   "keywords": [
     "eslint",
@@ -15,6 +15,7 @@
   "scripts": {
     "build": "rimraf lib && babel src --extensions \".js,.ts\" --out-dir lib --source-maps inline",
     "lint": "eslint --ext .ts,.js --ignore-path .eslintignore .",
+    "postinstall": "yarn build",
     "test": "jest"
   },
   "dependencies": {
@@ -48,8 +49,8 @@
   "license": "ISC",
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint && yarn build && git add .",
-      "pre-push": "yarn test"
+      "pre-commit": "yarn lint",
+      "pre-push": "yarn lint && yarn test"
     }
   }
 }
