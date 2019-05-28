@@ -1,4 +1,4 @@
-import { CLIEngine } from 'eslint';
+import { Linter } from 'eslint';
 import { braceOnSameLine } from './rules';
 import { base as baseConfigOptions, mixed as mixedConfigOptions } from './configs';
 import * as enums from './enums';
@@ -6,40 +6,35 @@ import * as enums from './enums';
 /**
  * use in ESLint config
  * {
- *   extends: ['plugin:extended-brace-plugin/mixed']
+ *   extends: ['plugin:extended-brace-rules/mixed'],
+ *   plugins: ['extended-brace-rules']
  * }
  */
 
-const base: CLIEngine.Options = {
-  plugins: ['extended-brace-plugin'],
+const base: Linter.Config = {
   rules: {
     'brace-style': 'off',
-    'extended-brace-plugin/brace-on-same-line': [
+    'extended-brace-rules/brace-on-same-line': [
       'error',
       ...baseConfigOptions,
     ],
   },
 };
 
-const mixed: CLIEngine.Options = {
-  plugins: ['extended-brace-plugin'],
+const mixed: Linter.Config = {
   rules: {
     'brace-style': 'off',
-    'extended-brace-plugin/brace-on-same-line': [
+    'extended-brace-rules/brace-on-same-line': [
       'error',
       ...mixedConfigOptions,
     ],
   },
 };
 
-const configs = { base, mixed };
+export const configs = { base, mixed };
 
-const rules = {
+export const rules = {
   'brace-on-same-line': braceOnSameLine,
 };
 
-export {
-  configs,
-  enums,
-  rules,
-};
+export { enums };
