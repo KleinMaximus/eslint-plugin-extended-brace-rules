@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-extended-brace-rules",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Enhancements to eslint brace rules",
   "keywords": [
     "eslint",

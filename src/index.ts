@@ -1,5 +1,5 @@
 import { CLIEngine } from 'eslint';
-import rules from './rules';
+import { braceOnSameLine } from './rules';
 import { base as baseConfigOptions, mixed as mixedConfigOptions } from './configs';
 import * as enums from './enums';
 
@@ -33,6 +33,10 @@ const mixed: CLIEngine.Options = {
 };
 
 const configs = { base, mixed };
+
+const rules = {
+  'brace-on-same-line': braceOnSameLine,
+};
 
 export {
   configs,
