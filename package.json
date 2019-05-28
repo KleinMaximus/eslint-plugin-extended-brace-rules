@@ -19,9 +19,9 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.5",
     "eslint-plugin-brace-rules": "^0.1.6",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "rimraf": "^2.6.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -29,6 +29,7 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-typescript": "^7.3.3",
+    "@babel/runtime": "^7.4.5",
     "@cloudcmd/read-files-sync": "^2.0.1",
     "@types/eslint": "^4.16.6",
     "@types/jest": "^24.0.13",
@@ -42,7 +43,6 @@
     "eslint-plugin-jest": "^22.5.1",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
-    "rimraf": "^2.6.3",
     "typescript": "^3.4.5",
     "typescript-eslint-parser": "^22.0.0"
   },
