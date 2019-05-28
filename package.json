@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-extended-brace-rules",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Enhancements to eslint brace rules",
   "keywords": [
     "eslint",
@@ -15,13 +15,12 @@
   "scripts": {
     "build": "rimraf lib && babel src --extensions \".js,.ts\" --out-dir lib --source-maps inline",
     "lint": "eslint --ext .ts,.js --ignore-path .eslintignore .",
-    "postinstall": "yarn build",
     "test": "jest"
   },
   "dependencies": {
     "eslint-plugin-brace-rules": "^0.1.6",
     "lodash": "^4.17.11",
-    "rimraf": "^2.6.3"
+    "@babel/runtime": "^7.4.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.4.4",
@@ -29,7 +28,6 @@
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-typescript": "^7.3.3",
-    "@babel/runtime": "^7.4.5",
     "@cloudcmd/read-files-sync": "^2.0.1",
     "@types/eslint": "^4.16.6",
     "@types/jest": "^24.0.13",
@@ -43,6 +41,7 @@
     "eslint-plugin-jest": "^22.5.1",
     "husky": "^2.3.0",
     "jest": "^24.8.0",
+    "rimraf": "^2.6.3",
     "typescript": "^3.4.5",
     "typescript-eslint-parser": "^22.0.0"
   },
@@ -50,7 +49,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint",
-      "pre-push": "yarn lint && yarn test"
+      "pre-push": "yarn test && yarn build && git add ."
     }
   }
 }
