@@ -19,6 +19,7 @@ module.exports = {
     '@typescript-eslint/no-object-literal-type-assertion': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
+    'import/extensions': 'off',
     'max-len': [
       'error',
       {
